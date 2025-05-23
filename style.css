@@ -1,0 +1,260 @@
+/* ! CSS Resetleme */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+/* ! CSS Resetleme */
+/* Root */
+:root {
+  --black-color: #000;
+  --white-color: #ffff;
+  --seperation-color: #363636;
+  --btn-bg-color: rgba(248, 243, 243, 0.021);
+}
+/* Root */
+
+body {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.seperation {
+  border: 3px solid rgb(54, 54, 54);
+}
+
+/* * Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60vw;
+  height: 100px;
+  /* vw ==> Açılır pencerenin %60' ı demektir. Ama %60 ile 60 vw aynı değildir. % ile kapsayıcının %60' ını alırken vw ile pencerenin %60' ını alırız. */
+  margin: auto;
+}
+.navbar img {
+  width: 130px;
+  z-index: 1;
+}
+
+.navbar button {
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  padding: 3px 8px;
+  background-color: var(--btn-bg-color);
+  color: var(--white-color);
+  border: 1px solid var(--white-color);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.4s;
+  z-index: 1;
+}
+
+.btn-red {
+  background-color: red !important ;
+}
+.btn-red:hover {
+  background-color: var(--btn-bg-color) !important ;
+  /* ! !important kelimesini still çakışması olduğunda çalışmasını istediğimiz stilin yanına yazarız. Bu sayede ilgili still çakışması giderilir. */
+}
+.navbar .btn:hover {
+  background-color: red;
+}
+
+/* * Hero */
+
+.hero {
+  background-image: url(./assets/banner.jpg);
+  height: 644px;
+  background-position: center center;
+  background-size: max(1200px, 100vw);
+  position: relative;
+}
+.box {
+  width: 100%;
+  height: 644px;
+  position: absolute;
+  top: 0;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  height: calc(100% - 100px);
+  /* Burada calc(100% - 100px) kullanmamızın sebebi hero içerisindeki .hero-content elemanına navbar'dan kalan tüm alanı vermek istediğimizden. Bu şekilde navbar' ın yüksekliği 100px bunun haricinde kalan tüm alanı sen al demiş olduk. */
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  z-index: 1;
+}
+.hero-content p {
+  font-size: 24px;
+  font-weight: 500;
+  z-index: 1;
+}
+.hero-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.hero-wrapper input {
+  padding: 7px 101px 8px 14px;
+  font-size: 12px;
+  background-color: var(--btn-bg-color);
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 4px;
+}
+.hero-wrapper button {
+  padding: 8px 24px;
+  font-size: 18px;
+}
+
+/* * İnfo Area */
+.info-area {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  max-width: 70vw;
+  margin: auto;
+}
+.info-area div {
+  flex: 1;
+}
+.info-area div h1 {
+  font-size: 48px;
+}
+
+.info-area div p {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.info-area .secImage {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-area .secImage img {
+  position: relative;
+  width: 555px;
+  z-index: 10;
+}
+
+.info-area .secImage video {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+}
+
+/* * FAQ */
+.faq {
+  padding: 35px;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 48px;
+}
+
+.faq-box {
+  background-color: #272727;
+  font-size: 24px;
+  margin: 34px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 24px;
+  cursor: pointer;
+  max-width: 60vw;
+  transition: all 0.4s;
+  white-space: nowrap;
+}
+
+.faq-box:hover {
+  background-color: rgb(23, 23, 23);
+}
+
+/* * Footer */
+
+.footer {
+  max-width: 60vw;
+  margin: auto;
+  padding: 34px;
+}
+
+.footer .questions {
+  font-size: 25px;
+  margin-bottom: 54px;
+}
+
+.footer-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-item a {
+  color: white;
+  font-size: 18px;
+}
+
+/* ! Media Quaries */
+
+@media (max-width: 1400px) {
+  .info-area {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .info-area h1 {
+    font-size: 35px !important ;
+  }
+  .info-area p {
+    font-size: 20px !important ;
+  }
+  .info-area img {
+    width: 450px !important ;
+  }
+
+  .faq-box {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1650px) {
+  .info-area {
+    max-width: 60vw;
+  }
+  .info-area .secImage video {
+    right: 20px;
+  }
+}
