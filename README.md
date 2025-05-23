@@ -1,6 +1,5 @@
 # Netflix Clone
 
-
 En sevdiğiniz içeriklere kolayca ulaşabildiğin, eğlenceli zamanlar geçirebildiğin bir film sitesidir.
 
 Bu proje esponsive ui' ya sahip, iconlar ve hover efektleri kullanılarak hazırlanmıştır.
@@ -10,5 +9,6 @@ Bu proje esponsive ui' ya sahip, iconlar ve hover efektleri kullanılarak hazır
 - HTML
 - CSS
 
-
 # EKRAN GÖRÜNTÜSÜ
+
+<img src="netflix-clone.gif"/>
