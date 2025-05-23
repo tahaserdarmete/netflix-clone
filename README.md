@@ -4,7 +4,7 @@ It is a movie site where you can easily access your favorite content and have fu
 
 This project has a responsive UI and was prepared using icons and hover effects.
 
-# Teknologies Useed
+# Teknologies Used
 
 - HTML
 - CSS
